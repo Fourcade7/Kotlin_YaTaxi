@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#FEBD2F"
-    tools:context=".MainActivity2">
+    tools:context=".ui.RegisterActivity">
 
     <LinearLayout
         android:gravity="center"
-        android:layout_weight="2"
+        android:layout_weight="4"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -61,7 +61,7 @@
                 <TextView
                     android:fontFamily="@font/gilroymedium"
                     android:textColor="@color/black"
-                    android:text="Xush kelibsiz"
+                    android:text="Ro`yxatdan o`tish"
                     android:textSize="24dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"></TextView>
@@ -75,13 +75,30 @@
                     android:id="@+id/outlinedTextField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Login"
+                    android:hint="Familya"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textinputedittext1"
+                        android:id="@+id/textinputedittextfirstname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="test2"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/outlinedTextFieldlastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ismi"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textinputedittextlastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="test2"
                         />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -94,9 +111,10 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
-
+                        android:id="@+id/textinputedittextphonenumberregister"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="+998974502545"
                         />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -110,8 +128,10 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textinputedittextpasswordregister"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="aldsfjhalksdjfhalsdkjfh"
                         />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -125,13 +145,19 @@
                     android:layout_height="wrap_content"></TextView>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/buttonac2kirish"
+                    android:id="@+id/buttonaclogin2"
                     android:textAllCaps="false"
                     android:layout_marginTop="10dp"
                     android:text="Kirish"
                     android:background="@drawable/buttonyellow"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"></androidx.appcompat.widget.AppCompatButton>
+                <ProgressBar
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/progressbarregister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></ProgressBar>
                 <TextView
                     android:layout_marginTop="10dp"
                     android:layout_gravity="center"
@@ -141,8 +167,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"></TextView>
                 <androidx.appcompat.widget.AppCompatButton
+
                     android:textAllCaps="false"
-                    android:id="@+id/register1"
+                    android:id="@+id/buttonregister"
                     android:textColor="@color/white"
                     android:layout_marginTop="10dp"
                     android:text="Ro'yxatdan o'tish"

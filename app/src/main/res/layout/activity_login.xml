@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FEBD2F"
+    tools:context=".ui.LoginActivity">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_marginRight="8dp"
+                app:cardCornerRadius="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:src="@drawable/logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"></ImageView>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/gilroymedium"
+                android:text="YaTaxi"
+                android:textSize="36dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"></TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_gravity="bottom"
+            app:cardCornerRadius="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:fontFamily="@font/gilroymedium"
+                    android:textColor="@color/black"
+                    android:text="Xush kelibsiz"
+                    android:textSize="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+                <TextView
+                    android:fontFamily="@font/gilroymedium"
+                    android:text="Iltimos ma’lumotlaringizni kiriting"
+                    android:textSize="14dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/outlinedTextField2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Telefon raqamingiz"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/outlinedTextFieldphonelogin"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/outlinedTextField3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Parol"
+                    app:passwordToggleEnabled="true"
+
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/outlinedTextFieldpasswordlogin"
+                        android:inputType="textPassword"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/gilroymedium"
+                    android:text="Parolingizni unutdingizmi?"
+                    android:textSize="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+                <ProgressBar
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/progressbarlogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></ProgressBar>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonaclogin"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="10dp"
+                    android:text="Kirish"
+                    android:background="@drawable/buttonyellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></androidx.appcompat.widget.AppCompatButton>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/gilroymedium"
+                    android:text="Akkauntingiz bormi?"
+                    android:textSize="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+                <androidx.appcompat.widget.AppCompatButton
+
+                    android:textAllCaps="false"
+                    android:id="@+id/buttonregister2"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:text="Ro'yxatdan o'tish"
+                    android:background="@drawable/buttonblue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></androidx.appcompat.widget.AppCompatButton>
+
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</LinearLayout>
