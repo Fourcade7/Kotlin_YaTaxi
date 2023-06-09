@@ -13,10 +13,10 @@ data class RegisterResponse(
     val phone_number: Any?=null,
 
 )
-@Parcelize
-data class RegisterResponseError(
-    val phone_number: List<String> = emptyList()
-):Parcelable
+//@Parcelize
+//data class RegisterResponseError(
+//    val phone_number: List<String> = emptyList()
+//):Parcelable
 
 
 //{ "id": 2341, "person": "Bob" }

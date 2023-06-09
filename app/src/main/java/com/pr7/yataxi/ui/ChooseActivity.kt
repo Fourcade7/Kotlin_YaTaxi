@@ -4,9 +4,8 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.pr7.yataxi.R
 import com.pr7.yataxi.databinding.ActivityChooseBinding
-import com.pr7.yataxi.utilits.showtoast
+import com.pr7.yataxi.ui.register.RegisterActivity
 
 class ChooseActivity : AppCompatActivity() {
     lateinit var binding: ActivityChooseBinding
@@ -19,12 +18,12 @@ class ChooseActivity : AppCompatActivity() {
         binding.apply {
 
             buttonpassanger.setOnClickListener {
-                startActivity(Intent(this@ChooseActivity,RegisterActivity::class.java))
+                startActivity(Intent(this@ChooseActivity, RegisterActivity::class.java))
                 finish()
 
             }
             buttondriver.setOnClickListener {
-                startActivity(Intent(this@ChooseActivity,RegisterActivity::class.java))
+                startActivity(Intent(this@ChooseActivity, RegisterActivity::class.java))
                 finish()
             }
         }

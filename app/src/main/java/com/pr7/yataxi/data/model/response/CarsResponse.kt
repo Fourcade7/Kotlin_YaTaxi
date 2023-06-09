@@ -6,3 +6,8 @@ data class CarsResponse(
     val previous: Any,
     val results: List<ResultCar>
 )
+data class ResultCar(
+    val id: Int,
+    val manufacturer: Int,
+    val name: String
+)

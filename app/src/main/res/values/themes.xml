@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.YaTaxi" parent="Base.Theme.YaTaxi" />
+
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/dropdown</item>
+    </style>
 </resources>

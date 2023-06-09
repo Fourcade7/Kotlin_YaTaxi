@@ -1,4 +1,4 @@
-package com.pr7.yataxi.ui
+package com.pr7.yataxi.ui.register
 
 import android.content.Intent
 import android.graphics.Color
@@ -6,20 +6,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
-import com.pr7.yataxi.R
 import com.pr7.yataxi.data.model.body.RegisterBody
 import com.pr7.yataxi.data.model.response.RegisterResponse
 
 
 
 import com.pr7.yataxi.databinding.ActivityRegisterBinding
+import com.pr7.yataxi.ui.login.LoginActivity
 import com.pr7.yataxi.utilits.showlogd
 import com.pr7.yataxi.utilits.showtoast
-import com.pr7.yataxi.viewmodel.MainViewModel
 
 class RegisterActivity : AppCompatActivity() {
     lateinit var binding: ActivityRegisterBinding
-    val mainViewModel: MainViewModel by viewModels()
+    val registerViewModel: RegisterViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
@@ -47,7 +46,7 @@ class RegisterActivity : AppCompatActivity() {
             buttonregister.setOnClickListener {
                 showtoast(textinputedittextlastname.text.toString())
 
-                mainViewModel.registeruser(
+                registerViewModel.registeruser(
                     RegisterBody(
                         first_name = textinputedittextfirstname.text.toString(),
                         last_name = textinputedittextlastname.text.toString(),
@@ -58,7 +57,7 @@ class RegisterActivity : AppCompatActivity() {
 
             }
 
-            mainViewModel.succesregister.observe(this@RegisterActivity) {
+            registerViewModel.succesregister.observe(this@RegisterActivity) {
                 if (it) {
                     progressbarregister.visibility = View.VISIBLE
 
@@ -68,7 +67,7 @@ class RegisterActivity : AppCompatActivity() {
                 }
             }
 
-            mainViewModel.registerResponseLiveData.observe(this@RegisterActivity) {
+            registerViewModel.registerResponseLiveData.observe(this@RegisterActivity) {
 
                 when(it){
                     is RegisterResponse->{
@@ -78,6 +77,8 @@ class RegisterActivity : AppCompatActivity() {
 
                             val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
                             intent.apply {
+                                putExtra("first_name","${textinputedittextfirstname.text.toString()}")
+                                putExtra("last_name","${textinputedittextlastname.text.toString()}")
                                 putExtra("phone","${textinputedittextphonenumberregister.text.toString()}")
                                 putExtra("password","${textinputedittextpasswordregister.text.toString()}")
                             }

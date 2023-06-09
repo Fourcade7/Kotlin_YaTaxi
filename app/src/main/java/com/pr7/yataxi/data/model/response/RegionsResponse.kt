@@ -4,5 +4,17 @@ data class RegionsResponse(
     val count: Int,
     val next: Any,
     val previous: Any,
-    val resultRegions: List<ResultRegion>
+    val results: List<ResultRegion>
+)
+
+data class ResultRegion(
+    val districts: List<District>,
+    val id: Int,
+    val name: String
+)
+
+data class District(
+    val id: Int,
+    val name: String,
+    val region: Int
 )

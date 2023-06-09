@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <corners android:radius="16dp"></corners>
-    <solid android:color="#171725"></solid>
 
-</shape>
+<ripple xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#222B5C"
+    tools:ignore="MissingPrefix">
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="rectangle">
+            <corners android:radius="16dp"></corners>
+            <solid android:color="#171725"></solid>
+
+        </shape>
+    </item>
+</ripple>

@@ -1,9 +1,13 @@
 package com.pr7.yataxi.utilits
 
+import android.app.Dialog
 import android.content.Intent
 import android.util.Log
+import android.view.LayoutInflater
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.pr7.yataxi.R
 
 
 fun AppCompatActivity.showtoast(text:String){
@@ -11,6 +15,16 @@ fun AppCompatActivity.showtoast(text:String){
 }
 fun AppCompatActivity.showlogd(text:String){
     Log.d("PR77777", "logcat message: $text")
+}
+
+fun AppCompatActivity.alertdialogprogressbar(dialog: Dialog):Dialog{
+    val vieww=LayoutInflater.from(this).inflate(R.layout.progresssslayout,null)
+    val alertDialog=AlertDialog.Builder(this)
+    alertDialog.setView(vieww)
+    alertDialog.setTitle("Kuting")
+
+    return alertDialog.create()
+
 }
 
 
