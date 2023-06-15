@@ -1,9 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context=".ui.driver.DriverActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageviewcaravatar"
+            android:layout_gravity="center"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="3dp"
+            android:src="@drawable/tahoe"
+            android:scaleType="centerCrop"
+            android:translationZ="30dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"></de.hdodenhof.circleimageview.CircleImageView>
+        <androidx.cardview.widget.CardView
+            android:translationZ="10dp"
+            android:layout_marginTop="-55dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="9dp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="10dp">
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textviewusernamelastname"
+                    android:textSize="24dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/gilroymedium"
+                    android:text="Qo`chqorvoy Brat"
+                    android:layout_marginTop="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+                <TextView
+                    android:id="@+id/textviewcarname"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/gilroymedium"
+                    android:text="Tahoe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+                <TextView
+                    android:id="@+id/textviewdirections"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/gilroymedium"
+                    android:text="Toshkent - Urganch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonopencallphone"
+                    android:text="+998900773567"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/gilroymedium"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/buttongreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></androidx.appcompat.widget.AppCompatButton>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>

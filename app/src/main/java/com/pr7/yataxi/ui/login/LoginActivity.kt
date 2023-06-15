@@ -8,13 +8,11 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.pr7.yataxi.data.model.body.LoginBody
-import com.pr7.yataxi.data.model.response.LoginResponse
 import com.pr7.yataxi.data.pref.DataStoreManager
 import com.pr7.yataxi.databinding.ActivityLoginBinding
-import com.pr7.yataxi.ui.home.HomeActivity
+import com.pr7.yataxi.ui.regions.RegionsActivity
 import com.pr7.yataxi.ui.register.RegisterActivity
 import com.pr7.yataxi.utilits.showlogd
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
@@ -73,7 +71,7 @@ class LoginActivity : AppCompatActivity() {
                         dataStoreManager.save(key = "last_name", value = last_name ?: "")
                     }
 
-                    val intent=Intent(this@LoginActivity, HomeActivity::class.java)
+                    val intent=Intent(this@LoginActivity, RegionsActivity::class.java)
                     startActivity(intent)
                     finish()
 

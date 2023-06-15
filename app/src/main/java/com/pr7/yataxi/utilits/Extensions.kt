@@ -27,9 +27,14 @@ fun AppCompatActivity.alertdialogprogressbar(dialog: Dialog):Dialog{
 
 }
 
-
+enum class TELEFONLAR{
+        IPHONE,
+        TECNO
+}
 
 fun main(){
+
+    println("hoziegi telefoning IPHONE")
     val box:Box<Int> =Box<Int>(4)
     println(box.value)
 

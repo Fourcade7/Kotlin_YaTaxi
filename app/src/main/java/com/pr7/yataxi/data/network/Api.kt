@@ -28,7 +28,9 @@ interface Api {
     suspend fun getAllRegions(@Header("Authorization") token:String):RegionsResponse
 
     @GET("api/filter-directions/")
-    suspend fun getDrivers(@Query("direction_from") from:Int,@Query("direction_to") to:Int):DriverResponse
+    suspend fun getDrivers(@Header("Authorization") token:String ,
+                           @Query("direction_from") from:Int,
+                           @Query("direction_to") to:Int):DriverResponse
 
 
 

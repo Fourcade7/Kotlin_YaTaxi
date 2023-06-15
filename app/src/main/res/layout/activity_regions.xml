@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.regions.RegionsActivity">
+    <ImageView
+        android:layout_marginTop="15dp"
+        android:layout_weight="2"
+        android:src="@drawable/manpassanger"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ImageView>
+    <LinearLayout
+        android:padding="15dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent">
+        <TextView
+            android:fontFamily="@font/gilroymedium"
+            android:textColor="@color/black"
+            android:text="Qayerdan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardUseCompatPadding="true"
+            >
+            <Spinner
+                android:background="@drawable/backgroundspiinner"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/spinnerviloyatfrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></Spinner>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardUseCompatPadding="true"
+            >
+            <Spinner
+                android:background="@drawable/backgroundspiinner"
+                android:id="@+id/spinnertumanfrom"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></Spinner>
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_marginVertical="5dp"
+            android:fontFamily="@font/gilroymedium"
+            android:textColor="@color/black"
+            android:text="Qayerga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardUseCompatPadding="true"
+            >
+            <Spinner
+                android:background="@drawable/backgroundspiinner"
+                android:id="@+id/spinnerviloyatto"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></Spinner>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardUseCompatPadding="true"
+            >
+            <Spinner
+                android:background="@drawable/backgroundspiinner"
+                android:id="@+id/spinnertumanto"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></Spinner>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonconfirm"
+        android:text="Tasdiqlash"
+        android:fontFamily="@font/gilroymedium"
+        android:textAllCaps="false"
+        android:layout_margin="15dp"
+        android:background="@drawable/buttonyellow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></androidx.appcompat.widget.AppCompatButton>
+
+</LinearLayout>

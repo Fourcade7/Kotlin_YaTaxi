@@ -1,15 +1,14 @@
-package com.pr7.yataxi.ui.home
+package com.pr7.yataxi.ui.regions
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.pr7.yataxi.data.model.response.LoginResponse
 import com.pr7.yataxi.data.model.response.RegionsResponse
 import com.pr7.yataxi.data.repository.MainRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class HomeViewModel constructor():ViewModel() {
+class RegionsModel constructor():ViewModel() {
 
     val mainRepository=MainRepository()
     val succesregion= MutableLiveData<Boolean>()

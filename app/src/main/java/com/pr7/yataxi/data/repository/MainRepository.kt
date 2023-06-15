@@ -2,6 +2,7 @@ package com.pr7.yataxi.data.repository
 
 import com.pr7.yataxi.data.model.body.LoginBody
 import com.pr7.yataxi.data.model.body.RegisterBody
+import com.pr7.yataxi.data.model.response.DriverResponse
 import com.pr7.yataxi.data.model.response.LoginResponse
 import com.pr7.yataxi.data.model.response.RegionsResponse
 import com.pr7.yataxi.data.model.response.RegisterResponse
@@ -15,7 +16,6 @@ class MainRepository {
 
 
     suspend fun registeruser(registerBody: RegisterBody): RegisterResponse {
-
             val response:RegisterResponse= RetrofitInstance.api.registerUser(registerBody)
             return response
 
@@ -26,9 +26,13 @@ class MainRepository {
         return response
 
     }
-
     suspend fun getRegions(token:String):RegionsResponse{
         val response=RetrofitInstance.api.getAllRegions("Token $token")
+        return response
+    }
+
+    suspend fun getDrivers(token:String,from:Int,to:Int):DriverResponse{
+        val response=RetrofitInstance.api.getDrivers("Token $token",from, to)
         return response
     }
 
