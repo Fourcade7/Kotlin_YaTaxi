@@ -23,10 +23,8 @@ class SplashActivity : AppCompatActivity() {
 
         lifecycleScope.launch {
             dataStoreManager.load("token").collect{token->
-                showlogd(token)
-                if (token==""){
-                    showlogd("if scope $token")
 
+                if (token==""){
                         delay(3000)
                         startActivity(Intent(this@SplashActivity,ChooseActivity::class.java))
                         finish()

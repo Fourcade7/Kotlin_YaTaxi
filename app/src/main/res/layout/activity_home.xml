@@ -6,10 +6,126 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.home.HomeActivity">
-
-    <ImageView
-        android:src="@drawable/carferraritwo"
-        android:scaleType="centerCrop"
+    <RelativeLayout
+        android:translationZ="10dp"
         android:layout_width="match_parent"
-        android:layout_height="250dp"></ImageView>
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/carferraritwo"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"></ImageView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#00000000"
+            android:backgroundTint="#00000000"
+            app:cardCornerRadius="8dp">
+            >
+            <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/blurviewlogo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"></eightbitlab.com.blurview.BlurView>
+                <ImageView
+                    android:src="@drawable/logopng"
+                    android:padding="10dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"></ImageView>
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardviewperson"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="45dp"
+           android:layout_marginRight="16dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#00000000"
+            android:backgroundTint="#00000000"
+            app:cardCornerRadius="8dp">
+            >
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp">
+
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/blurviewprofile"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"></eightbitlab.com.blurview.BlurView>
+                <ImageView
+                    android:src="@drawable/round_person_24"
+                    android:padding="10dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"></ImageView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:translationZ="30dp"
+        android:layout_marginTop="-25dp"
+        android:background="@drawable/shapelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_margin="15dp"
+            android:text="Viloyatni tanlang"
+            android:textSize="25dp"
+            android:fontFamily="@font/gilroymedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:foregroundGravity="center"
+            android:clipToPadding="false"
+            android:overScrollMode="ifContentScrolls"
+            android:id="@+id/recyclerview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+        <com.arindicatorview.ARIndicatorView
+            android:id="@+id/ar_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:indicator_size="70"
+            app:number_of_indicators="3"
+            app:indicator_color="@color/colorAccent"
+            app:selected_color="@color/colorPrimary"
+            app:indicator_animation="@anim/zoom_in"
+            app:indicator_shape="@drawable/backgroundforindeicator"
+            app:indicator_scrubbing="true"
+            app:animate_indicator_scrubbing="true"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttongo"
+            android:layout_gravity="center"
+            android:background="@drawable/buttonyellow"
+            android:text="ketdik"
+            android:fontFamily="@font/gilroymedium"
+            android:paddingHorizontal="15dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"></androidx.appcompat.widget.AppCompatButton>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewcars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
 </LinearLayout>

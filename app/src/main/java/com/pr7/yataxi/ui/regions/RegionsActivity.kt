@@ -54,7 +54,7 @@ class RegionsActivity : AppCompatActivity() {
         }
         regionsModel.regionResponseLiveData.observe(this@RegionsActivity){
             val viloyatarraylist=ArrayList<String>()
-            viloyatarraylist.add("Viloyatni tanla tez")
+            viloyatarraylist.add("Viloyatni tanlang")
             for (i in 0 until it.results.size){
                 viloyatarraylist.add(it.results.get(i).name)
                 for (j in 0 until it.results.get(i).districts.size){
@@ -79,7 +79,7 @@ class RegionsActivity : AppCompatActivity() {
                         //showlogd(id.toString())
                         val tumanarraylist=ArrayList<String>()
                         val choosetumanarraylist=ArrayList<String>()
-                        choosetumanarraylist.add("Kuda ketasan ?")
+                        choosetumanarraylist.add("Tumanni tanlang ?")
                         if (position==0){
                             val arrayAdaptert=ArrayAdapter(this@RegionsActivity, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,choosetumanarraylist)
                             spinnertumanfrom.adapter=arrayAdaptert
@@ -116,7 +116,7 @@ class RegionsActivity : AppCompatActivity() {
                         //showlogd(id.toString())
                         val tumanarraylist=ArrayList<String>()
                         val choosetumanarraylist=ArrayList<String>()
-                        choosetumanarraylist.add("Kuda ketasan ?")
+                        choosetumanarraylist.add("tumannni tanlang ?")
                         if (position==0){
                             val arrayAdaptert=ArrayAdapter(this@RegionsActivity, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,choosetumanarraylist)
                             spinnertumanto.adapter=arrayAdaptert
